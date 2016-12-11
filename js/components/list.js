@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './card';
 
-export default function List() {
+export default function List(props) {
     return (
         <div>
-            <Card text="foo" />
-            <Card text="bar" />
-            <Card text="baz" />
+            <h2>{props.title}</h2>
+            <Card text={props.card1} />
+            <Card text={props.card2} />
+            <Card text={props.card3} />
         </div>
     );
 }
