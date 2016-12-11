@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Card from './card';
 
 export default function List(props) {
@@ -9,6 +8,9 @@ export default function List(props) {
             <Card text={props.card1} />
             <Card text={props.card2} />
             <Card text={props.card3} />
+            <form onSubmit={props.onSubmit}>
+                <input type="text" onChange={props.onChange} /><input type="submit" />
+            </form>
         </div>
     );
 }
